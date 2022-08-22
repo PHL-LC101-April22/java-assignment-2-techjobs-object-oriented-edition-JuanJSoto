@@ -38,7 +38,8 @@ public class JobTest {
     public void testJobsForEquality(){
         Job job4 = new Job("Job job", new Employer("ACME"), new Location("Desert"), new PositionType("Quality"), new CoreCompetency("Persistence"));
         Job job5 = new Job("Job job", new Employer("ACME"), new Location("Desert"), new PositionType("Quality"), new CoreCompetency("Persistence"));
-        assertFalse(job4.getId() != job5.getId());
+        //assertFalse(job4.getId() != job5.getId());
+        assertFalse(job4.equals(job5));
     }
 }
 
