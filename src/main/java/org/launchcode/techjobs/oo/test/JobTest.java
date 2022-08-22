@@ -38,8 +38,21 @@ public class JobTest {
     public void testJobsForEquality(){
         Job job4 = new Job("Job job", new Employer("ACME"), new Location("Desert"), new PositionType("Quality"), new CoreCompetency("Persistence"));
         Job job5 = new Job("Job job", new Employer("ACME"), new Location("Desert"), new PositionType("Quality"), new CoreCompetency("Persistence"));
-        //assertFalse(job4.getId() != job5.getId());
+        //assertFalse(job4.getId() == job5.getId()); //either way works
         assertFalse(job4.equals(job5));
+    }
+    Job job6 = new Job("Job job", new Employer("ACME"), new Location("Desert"), new PositionType("Quality"), new CoreCompetency("Persistence"));
+
+    @Test
+    public void testToStringStartsAndEndsWithNewLine(){
+        assertEquals('\n', job6.toString().charAt(0));
+        assertEquals('\n', job6.toString().charAt(job6.toString().length()-1));
+    }
+
+    @Test
+    public void testToStringContainsCorrectLabelsAndData() {
+        assertEquals("\nID: 1\nName: Job job\nEmployer: ACME\nLocation: Desert\nPosition Type: Quality\nCore Competency: Persistence\n", job6.toString());
+
     }
 }
 
