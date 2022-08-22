@@ -102,7 +102,7 @@ public class Job {
     public String toString() {
         String output;
 
-        if(name = ""){
+        if(name == ""){
             name = "Data not available";
         }
         if(employer.getValue() == ""){
