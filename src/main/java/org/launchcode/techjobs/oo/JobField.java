@@ -24,9 +24,9 @@ public abstract class JobField {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof Job)) return false;
-        Job job = (Job) o;
-        return getId() == job.getId();
+        if (!(o instanceof JobField)) return false;
+        JobField JobField = (JobField) o;
+        return getId() == JobField.getId();
     }
 
     @Override
