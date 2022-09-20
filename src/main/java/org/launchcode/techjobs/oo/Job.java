@@ -102,19 +102,19 @@ public class Job {
     public String toString() {
         String output;
 
-        if(name == ""){
+        if(name.equals("")){
             name = "Data not available";
         }
-        if(employer.getValue() == ""){
+        if(employer.getValue().equals("")){
             employer.setValue("Data not available");
         }
-        if(location.getValue() == ""){
+        if(location.getValue().equals("")){
             location.setValue("Data not available");
         }
-        if(positionType.getValue() == ""){
+        if(positionType.getValue().equals("")){
             positionType.setValue("Data not available");
         }
-        if(coreCompetency.getValue() == ""){
+        if(coreCompetency.getValue().equals("")){
             positionType.setValue("Data not available");
         }
 
